@@ -33,7 +33,7 @@
 	  	<div class="section no-pad-bot">
 	    	<div class="container2">
 	        	<div class="row center">
-	          	<h1 class="header col s12 light">HELLO</h1>
+	          	<h1 class="header col s12 light">HELLO:</h1>
 	       		</div>
 	      	</div>
 	    </div> 
@@ -70,13 +70,13 @@
 				container = document.getElementById( 'container1' );
 				camera = new THREE.PerspectiveCamera( 160, window.innerWidth / window.innerHeight, 1, 10000 );
 				controls = new THREE.FirstPersonControls( camera );
-				controls.movementSpeed = 100;
-				controls.lookSpeed = 0.1;
+				controls.movementSpeed = 70;
+				controls.lookSpeed = 0.07;
 				scene = new THREE.Scene();
 				scene.fog = new THREE.FogExp2( 0xC0C0C0, 0.009 );
 				data = generateHeight( worldWidth, worldDepth );
 				camera.position.y = data[ worldHalfWidth + worldHalfDepth * worldWidth ] * 10 + 500;
-				var geometry = new THREE.PlaneBufferGeometry( 7500, 7500, worldWidth - 1, worldDepth - 1 );
+				var geometry = new THREE.PlaneBufferGeometry( 21500, 11500, worldWidth - 1, worldDepth - 1 );
 				geometry.rotateX( - Math.PI / 2 );
 				var vertices = geometry.attributes.position.array;
 				for ( var i = 0, j = 0, l = vertices.length; i < l; i ++, j += 3 ) {
